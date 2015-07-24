@@ -27,7 +27,7 @@ docker run -d -v my_config_directory:/etc/repose -p 8080:8080 -p 9777:9777 --nam
 ### If you want to run with a volume container (preferred):
 
 ```
-tar -cv test_repose_configs/* | docker run -i --name repose-conf docker pull dimtruck/repose-docker:ubuntu-14.04-latest /bin/bash -c 'tar -xv'
+tar -cv test_repose_configs/* | docker run -i --name repose-conf dimtruck/repose-docker:ubuntu-14.04-latest /bin/bash -c 'tar -xv'
 docker run -d --volumes-from repose-conf -p 8080:8080 -p 9777:9777 --name myrepose dimtruck/repose-docker:ubuntu-14.04-latest
 ```
 
