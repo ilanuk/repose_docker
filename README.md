@@ -1,6 +1,6 @@
 # Repose Docker
 
-[![dockeri.co](http://dockeri.co/image/dimtruck/repose)](https://registry.hub.docker.com/u/dimtruck/repose/)
+[![dockeri.co](http://dockeri.co/image/dimtruck/repose-docker)](https://registry.hub.docker.com/u/dimtruck/repose-docker/)
 
 [![issues](https://img.shields.io/github/issues/dimtruck/repose_docker.svg) ![stars](https://img.shields.io/github/stars/dimtruck/repose_docker.svg)](https://github.com/dimtruck/repose_docker)
 
