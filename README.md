@@ -28,7 +28,7 @@ docker run -d -v my_config_directory:/etc/repose -p 8080:8080 -p 9777:9777 --nam
 
 ```
 tar -cv test_repose_configs/* | docker run -i --name repose-conf docker pull dimtruck/repose-docker:ubuntu-14.04-latest /bin/bash -c 'tar -xv'
-docker run -d --volumes-from repose-conf --name myrepose dimtruck/repose-docker:ubuntu-14.04-latest
+docker run -d --volumes-from repose-conf -p 8080:8080 -p 9777:9777 --name myrepose dimtruck/repose-docker:ubuntu-14.04-latest
 ```
 
 The second docker command can now be used in all of your ci pipelines (especially if you push it to your private hub).
