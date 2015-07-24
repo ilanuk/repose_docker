@@ -12,6 +12,10 @@ RUN rpm -Uvh daemonize-1.7.3-1.el7.x86_64.rpm
 
 RUN yum update -y && yum install -y repose-valve repose-filter-bundle repose-extensions-filter-bundle
 
+VOLUME /etc/repose
+WORKDIR /etc/repose
+USER repose
+
 EXPOSE 8080 9777
 
 CMD java  -Xmx512M -Xms512M -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/dump-repose.hprof -XX:MaxPermSize=128M -jar /usr/share/repose/repose-valve.jar -c /etc/repose
