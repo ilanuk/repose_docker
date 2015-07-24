@@ -27,7 +27,7 @@ docker run -d -v my_config_directory:/etc/repose -p 8080:8080 -p 9777:9777 --nam
 ### If you want to run with a volume container (preferred):
 
 ```
-docker create -v my_config_directory:/etc/repose --name reposeconfigs dimtruck/repose /bin/bash
+docker create -v my_config_directory:/etc/repose:Z --name reposeconfigs dimtruck/repose /bin/bash
 docker run -d --volumes-from reposeconfigs --name myrepose dimtruck/repose
 ```
 

@@ -8,5 +8,5 @@ RUN apt-get update && apt-get install -y repose-valve repose-filter-bundle repos
 
 EXPOSE 8080 9777
 
-CMD java  -Xmx1536M -Xms1024M -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/dump-repose.hprof -XX:MaxPermSize=128M -jar /usr/share/repose/repose-valve.jar -c /etc/repose
+CMD java  -Xmx512M -Xms512M -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/dump-repose.hprof -XX:MaxPermSize=128M -jar /usr/share/repose/repose-valve.jar -c /etc/repose
 
