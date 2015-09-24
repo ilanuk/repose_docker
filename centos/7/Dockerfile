@@ -10,7 +10,7 @@ RUN wget -O /etc/yum.repos.d/openrepose.repo http://repo.openrepose.org/el/openr
 RUN wget http://mirrors.karan.org/epel7/Packages/daemonize/20131231020837/1.7.3-1.el6.x86_64/daemonize-1.7.3-1.el7.x86_64.rpm
 RUN rpm -Uvh daemonize-1.7.3-1.el7.x86_64.rpm
 
-RUN yum update -y && yum install -y repose-valve-7.1.5.1 repose-filter-bundle-7.1.5.1 repose-extensions-filter-bundle-7.1.5.1
+RUN yum update -y && yum install -y repose-valve-7.1.6.0 repose-filter-bundle-7.1.6.0 repose-extensions-filter-bundle-7.1.6.0
 
 VOLUME /etc/repose
 WORKDIR /etc/repose
