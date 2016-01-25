@@ -16,7 +16,11 @@ VOLUME /etc/repose
 WORKDIR /etc/repose
 USER repose
 
+RUN touch /var/log/repose/current.log
+
+USER root
+
 EXPOSE 8080 9777
 
-CMD java  -Xmx512M -Xms512M -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/dump-repose.hprof -XX:MaxPermSize=128M -jar /usr/share/repose/repose-valve.jar -c /etc/repose
+CMD service repose-valve start && tail -f /var/log/repose/current.log
 
